@@ -1,4 +1,4 @@
-# Project 3 - *Name of App Here*
+# Project 3 - android-parsetagram
 
 **Name of your app** is a photo sharing app similar to Instagram but using Parse as its backend.
 
@@ -33,10 +33,8 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
+
 [https://i.imgur.com/KhvTqOF.git](https://o.imgur.com/KhvTqOF.gif)
-
-
-<img src='https://i.imgur.com/KhvTqOF.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
