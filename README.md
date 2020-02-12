@@ -33,6 +33,8 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
+[https://i.imgur.com/KhvTqOF.git](https://o.imgur.com/KhvTqOF.gif)
+
 
 <img src='https://i.imgur.com/KhvTqOF.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
