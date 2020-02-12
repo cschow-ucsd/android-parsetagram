@@ -24,7 +24,7 @@ public class PostsFragment extends Fragment {
     private RecyclerView rvPosts;
     protected List<Post> posts = new ArrayList<>();
     protected PostsAdapter adapter;
-    private SwipeRefreshLayout swipeRefreshLayout;
+    protected SwipeRefreshLayout swipeRefreshLayout;
 
     @Nullable
     @Override

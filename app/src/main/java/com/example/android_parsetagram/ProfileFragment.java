@@ -25,6 +25,7 @@ public class ProfileFragment extends PostsFragment {
                     Log.e(TAG, "done: Query failed.", e);
                     return;
                 }
+                swipeRefreshLayout.setRefreshing(false);
                 posts.clear();
                 posts.addAll(objects);
                 adapter.notifyDataSetChanged();
