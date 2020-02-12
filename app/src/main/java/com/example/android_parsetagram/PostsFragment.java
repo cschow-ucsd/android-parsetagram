@@ -11,6 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
@@ -23,6 +24,7 @@ public class PostsFragment extends Fragment {
     private RecyclerView rvPosts;
     protected List<Post> posts = new ArrayList<>();
     protected PostsAdapter adapter;
+    private SwipeRefreshLayout swipeRefreshLayout;
 
     @Nullable
     @Override
@@ -39,6 +41,14 @@ public class PostsFragment extends Fragment {
         adapter = new PostsAdapter(posts);
         rvPosts.setAdapter(adapter);
 
+        swipeRefreshLayout = view.findViewById(R.id.postsRefresh);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                queryPosts();
+            }
+        });
+
         queryPosts();
     }
 
@@ -54,6 +64,7 @@ public class PostsFragment extends Fragment {
                     Log.e(TAG, "done: Query failed.", e);
                     return;
                 }
+                swipeRefreshLayout.setRefreshing(false);
                 posts.clear();
                 posts.addAll(objects);
                 adapter.notifyDataSetChanged();
